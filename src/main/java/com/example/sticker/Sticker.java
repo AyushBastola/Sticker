@@ -21,25 +21,29 @@ public class Sticker extends Application {
         ball.setStrokeWidth(30);
         ball.setFill(Color.WHITE);
         ball.setStroke(Color.BLACK);
+//        Stop[] stops = new Stop[] {
+//                new Stop(0.00, Color.RED),
+//                new Stop(0.15, Color.ORANGE),
+//                new Stop(0.30, Color.YELLOW),
+//                new Stop(0.45, Color.GREEN),
+//                new Stop(0.60, Color.BLUE),
+//                new Stop(0.75, Color.INDIGO),
+//                new Stop(0.90, Color.VIOLET),
+//                new Stop(1.00, Color.PURPLE)
+//        };
+//        RadialGradient background = new RadialGradient(0, 0,
+//                0.5, 0.5,
+//                0.5,
+//                true,
+//                CycleMethod.NO_CYCLE,
+//                stops);
         Stop[] stops = new Stop[] {
-                new Stop(0.00, Color.RED),
-                new Stop(0.15, Color.ORANGE),
-                new Stop(0.30, Color.YELLOW),
-                new Stop(0.45, Color.GREEN),
-                new Stop(0.60, Color.BLUE),
-                new Stop(0.75, Color.INDIGO),
-                new Stop(0.90, Color.VIOLET),
-                new Stop(1.00, Color.PURPLE)
+                new Stop(0, Color.RED),
+                new Stop(1, Color.ORANGE),
         };
-        RadialGradient background = new RadialGradient(0, 0,
-                0.5, 0.5,
-                0.5,
-                true,
-                CycleMethod.NO_CYCLE,
-                stops);
+        LinearGradient background = new LinearGradient(0, 0, 1, 0, true, CycleMethod.NO_CYCLE, stops);
         ball.setFill(background);
-//        LinearGradient background = new LinearGradient(0, 0, 1, 0, true, CycleMethod.NO_CYCLE, stops);
-//        ball.setFill(background);
+
         Polygon cross1 = new Polygon();
         cross1.getPoints().addAll(new Double[] {
             170.0, 30.0, // Top right point
